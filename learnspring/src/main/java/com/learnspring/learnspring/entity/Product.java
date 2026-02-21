@@ -8,11 +8,11 @@ import jakarta.persistence.Id;
 public class Product {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     private String price;
     private String name;
 
-    public Product(long id, String price, String name) {
+    public Product(Long id, String price, String name) {
         this.id = id;
         this.price = price;
         this.name = name;
@@ -25,11 +25,23 @@ public class Product {
         return name;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
     public String getPrice() {
         return price;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }
